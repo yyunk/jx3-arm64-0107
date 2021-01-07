@@ -31,10 +31,12 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: yyunk
+    repository: jx3-arm64-0107
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: jxdemo-0107.jenkins-x3.arm64.linaro.org
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
@@ -42,6 +44,8 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: yyunk
   repository: bucketrepo
   secretStorage: local
   vault: {}
